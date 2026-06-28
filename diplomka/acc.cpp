@@ -9,6 +9,9 @@
 
 using namespace std;
 string currentUser;
+
+
+
 void registerUser()
 {
 	string login, password;
@@ -67,6 +70,11 @@ int main()
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 	int choise1;
+	SetConsoleTitleA("ToDo List");
+
+	system("color 0A");
+	system("mode con cols=100 lines=30");
+
 	do
 	{
 		cout << "-=-=-=-=-=-=-=Авторизация=-=-=-=-=-=-=-=-\n";
@@ -74,8 +82,7 @@ int main()
 		cout << "2.Регистрация\n";
 		cout << "0.Выйти\n";
 		cout << "Выберите действие: ";
-		cin >> choise1;
-		cin.ignore(10000, '\n');
+		choise1 = inputInt();
 		switch (choise1)
 		{
 		case 1:

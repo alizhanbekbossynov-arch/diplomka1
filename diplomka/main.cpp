@@ -6,6 +6,28 @@
 
 using namespace std;
 
+int inputInt()
+{
+    int x;
+
+    while (true)
+    {
+        cin >> x;
+
+        if (cin.fail())
+        {
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cout << "Ошибка! Введите число: ";
+        }
+        else
+        {
+            cin.ignore(10000, '\n');
+            return x;
+        }
+    }
+}
+
 void menu()
 {
     
@@ -37,8 +59,7 @@ void menu()
         
         cout << "Выберите: ";
 
-        cin >> choice;
-        cin.ignore(10000, '\n');
+        choice = inputInt();
 
         switch (choice)
         {

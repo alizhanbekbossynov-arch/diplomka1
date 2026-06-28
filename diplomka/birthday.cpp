@@ -91,6 +91,7 @@ void deleteBirthday()
 
     if (Dindex < 1 || Dindex > birthdayCount)
     {
+        system("cls");
         cout << "Неверный номер!\n";
         cin.ignore();
         return;

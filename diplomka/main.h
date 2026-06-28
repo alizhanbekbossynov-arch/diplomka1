@@ -10,3 +10,4 @@ extern int Day;
 extern int Month;
 
 void menu();
+int inputInt();
